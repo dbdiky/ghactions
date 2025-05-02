@@ -60,6 +60,10 @@ jobs:
       with:
         java-version: '17'
         distribution: 'temurin'
+    - name: Grant Gradle Execution
+      run: chmod +x gradlew
+    - name: Build with Gradle
+      run: ./gradlew build
 
     # Generates and submits a dependency graph, enabling Dependabot Alerts for all project dependencies.
     # See: https://github.com/gradle/actions/blob/main/dependency-submission/README.md
